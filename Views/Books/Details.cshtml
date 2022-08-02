@@ -1,0 +1,57 @@
+﻿@{
+	Layout = null;
+	var title = "Islam and the World";
+	var authors = new string[]
+	{
+		"Author: Sayyed Abul Hasan Ali Nadwi",
+		"Translator: Dr. Muhammad Kidwai"
+	};
+	var description = "<p>This book persuasively argues against the premise that Islam is a <em>spent force</em>, reminding readers of its dynamism.</p>";
+	var publishingHouse = "UK Islamic Academy";
+	var publicationYear = 2005;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<title>Book Details</title>
+	</head>
+
+	<body>
+
+		<div>
+
+			<h1>
+				Book Details
+			</h1>
+
+			<h2>
+				@title
+			</h2>
+
+			<ul>
+				@foreach (var author in authors)
+				{
+					<li>
+						@author
+					</li>
+				}
+			</ul>
+
+			<h3>
+				@Html.Raw(description)
+			</h3>
+
+			<h3>
+				@publishingHouse :: @publicationYear
+			</h3>
+
+		</div>
+
+	</body>
+
+</htm>
