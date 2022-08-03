@@ -1,15 +1,5 @@
 ﻿@{
 	Layout = null;
-	var title = "Islam and the World";
-	var authors = new string[]
-	{
-		"Author: Sayyed Abul Hasan Ali Nadwi",
-		"Translator: Dr. Muhammad Kidwai"
-	};
-	var description = "<p>This book persuasively argues against the premise that Islam is a <em>spent force</em>, reminding readers of its dynamism.</p>";
-	var publishingHouse = "UK Islamic Academy";
-	var publicationYear = 2005;
-
 }
 
 <!DOCTYPE html>
@@ -30,11 +20,11 @@
 			</h1>
 
 			<h2>
-				@title
+				@ViewBag.Title
 			</h2>
 
 			<ul>
-				@foreach (var author in authors)
+				@foreach (var author in ViewBag.Authors)
 				{
 					<li>
 						@author
@@ -43,11 +33,11 @@
 			</ul>
 
 			<h3>
-				@Html.Raw(description)
+				@Html.Raw(ViewBag.Description)
 			</h3>
 
 			<h3>
-				@publishingHouse :: @publicationYear
+				@ViewBag.PublishingHouse :: @ViewBag.PublicationYear
 			</h3>
 
 		</div>
