@@ -12,5 +12,12 @@ namespace GuidingLightBookGallery.Models
         public string PublishingHouse { get; set; }
         public string DescriptionHTML { get; set; }
         public Author[] Authors { get; set; }
+        public string DisplayBookInfo
+        {
+            get
+            {
+                return Title + "published by" + PublishingHouse;
+            }
+        }
     }
 }
