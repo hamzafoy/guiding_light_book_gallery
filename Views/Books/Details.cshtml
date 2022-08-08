@@ -1,4 +1,6 @@
-﻿@{
+﻿@model GuidingLightBookGallery.Models.Book;
+
+@{
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -20,24 +22,24 @@
 			</h1>
 
 			<h2>
-				@ViewBag.Title
+				@Model.Title
 			</h2>
 
 			<ul>
-				@foreach (var author in ViewBag.Authors)
+				@foreach (var author in Model.Authors)
 				{
 					<li>
-						@author
+						@author.FirstName @author.LastName :: @author.Role
 					</li>
 				}
 			</ul>
 
 			<h3>
-				@Html.Raw(ViewBag.Description)
+				@Html.Raw(Model.DescriptionHTML)
 			</h3>
 
 			<h3>
-				@ViewBag.PublishingHouse :: @ViewBag.PublicationYear
+				@Model.PublishingHouse :: @Model.PublicationYear
 			</h3>
 
 		</div>
