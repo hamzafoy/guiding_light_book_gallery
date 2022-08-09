@@ -13,7 +13,8 @@ namespace GuidingLightBookGallery.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var books = _bookRepository.GetBooks();
+            return View(books);
         }
 
         public ActionResult Details(int id)
