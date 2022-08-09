@@ -8,6 +8,7 @@ namespace GuidingLightBookGallery.Data
         {
         new Book()
             {
+                Id = 1,
                 Title = "Islam and the World",
                 Authors = new Author[]
                 {
