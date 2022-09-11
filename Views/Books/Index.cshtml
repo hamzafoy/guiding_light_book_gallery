@@ -13,7 +13,7 @@
 	{
 		<div class="row mt-5 mb-5">
 			<div class="col">
-				<h3>@book.Title</h3>
+				<h3>@Html.ActionLink(book.Title, "Details", new { id = book.Id })</h3>
 				@foreach (var author in book.Authors)
 				{
 					<h5 class="ml-5">@author.LastName, @author.Role</h5>
