@@ -11,7 +11,7 @@ namespace GuidingLightBookGallery.Controllers
         {
             _bookRepository = new BookRepository();
         }
-        public IActionResult Index()
+        public ActionResult Index()
         {
             var books = _bookRepository.GetBooks();
             return View(books);
